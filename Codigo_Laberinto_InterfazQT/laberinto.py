@@ -70,7 +70,7 @@ class laberinto(QMainWindow):#herencia
         self.letraPrevia = self.letraEnviada
     
     def cambio_modo(self):
-        self.letraEnviada = 'm'
+        self.letraEnviada = 'm' #falta modificar este
         if self.letraEnviada == self.letraPrevia:
             pass
         else:
