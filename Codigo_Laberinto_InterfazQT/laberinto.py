@@ -5,6 +5,9 @@ from PyQt5 import uic
 from PyQt5.Qt import Qt#CARLOS NO ES GAYTT
 import serial
 
+
+#HOLA, SOY EL CARLOS QUE NO ES GAY
+
 serial = serial.Serial('/dev/ttyUSB0', 115200)# (puerto, velocidad) objeto tipo serial
 
 #creacion de la clase principalll
