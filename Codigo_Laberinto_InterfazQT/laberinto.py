@@ -6,7 +6,7 @@ from PyQt5.Qt import Qt
 import serial
 
 
-#HOLA, SOY EL CARLOS QUE NO ES GAY
+#HOLA, SOY EL CARLOS QUE NO ES GAY - Ahora los dos somos gays h
 
 serial = serial.Serial('/dev/ttyUSB0', 115200)# (puerto, velocidad) objeto tipo serial
 
