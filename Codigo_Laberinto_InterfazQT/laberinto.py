@@ -2,7 +2,7 @@
 import sys # libreria que habilita funcionaliades del sistema
 from PyQt5.QtWidgets import QMainWindow, QApplication
 from PyQt5 import uic
-from PyQt5.Qt import Qt#CARLOS NO ES GAYTT
+from PyQt5.Qt import Qt#CA
 import serial
 
 serial = serial.Serial('/dev/ttyUSB0', 115200)# (puerto, velocidad) objeto tipo serial
