@@ -40,7 +40,7 @@ class laberinto(QMainWindow):#herencia
     def click_mex(self):
         self.letraEnviada = 'a'
         if self.letraEnviada == self.letraPrevia:
-            pass
+            pass#cambio
         else:
             serial.write(b'a')
         self.letraPrevia = self.letraEnviada
