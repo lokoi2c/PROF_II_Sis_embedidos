@@ -6,7 +6,7 @@ from PyQt5.Qt import Qt#CA
 import serial #dwddl
 
 
-#HOLA, SOY EL CARLOS QUE NO ES GAY
+#HOLA, este fue el ultimo cambio
 
 serial = serial.Serial('/dev/ttyUSB0', 115200)# (puerto, velocidad) objeto tipo serial
 
