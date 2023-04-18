@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QMainWindow, QApplication
 from PyQt5 import uic
 from PyQt5.Qt import Qt#CA
 import serial #dwddl
-
+#este es un ejemplo
 
 #HOLA, SOY EL CARLOS QUE NO ES GAY - Ahora los dos somos gays h
 
