@@ -6,59 +6,17 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>620</width>
+    <height>439</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout_2">
-    <item row="1" column="0">
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="3" column="0">
-       <widget class="QPushButton" name="mex">
-        <property name="text">
-         <string>-X</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QPushButton" name="may">
-        <property name="text">
-         <string>+Y</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="2">
-       <widget class="QPushButton" name="max">
-        <property name="text">
-         <string>+X</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1">
-       <widget class="QPushButton" name="centro">
-        <property name="text">
-         <string>CENTRAR</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QLabel" name="label_2">
-        <property name="text">
-         <string>Image Camera</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="1">
-       <widget class="QPushButton" name="mey">
-        <property name="text">
-         <string>-Y</string>
-        </property>
-       </widget>
-      </item>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout" columnstretch="1,3,1">
       <item row="0" column="1">
        <widget class="QLabel" name="label">
         <property name="layoutDirection">
@@ -69,10 +27,54 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="0">
-       <widget class="QPushButton" name="ADusb">
+      <item row="5" column="0">
+       <widget class="QPushButton" name="mex">
+        <property name="cursor">
+         <cursorShape>OpenHandCursor</cursorShape>
+        </property>
         <property name="text">
-         <string>Prender USB</string>
+         <string>-X</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QComboBox" name="portOptions"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="baudOptions"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="refreshButton">
+          <property name="text">
+           <string>Refresh</string>
+          </property>
+          <property name="icon">
+           <iconset theme="search"/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="4" column="1">
+       <widget class="QPushButton" name="may">
+        <property name="text">
+         <string>+Y</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QPushButton" name="centro">
+        <property name="text">
+         <string>CENTRAR</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QPushButton" name="mey">
+        <property name="text">
+         <string>-Y</string>
         </property>
        </widget>
       </item>
@@ -80,6 +82,53 @@
        <widget class="QCheckBox" name="modo">
         <property name="text">
          <string>Modo de juego</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="connectButton">
+        <property name="text">
+         <string>Conectar</string>
+        </property>
+        <property name="icon">
+         <iconset theme="document-open"/>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QPushButton" name="max">
+        <property name="text">
+         <string>+X</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" rowspan="3">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Image Camera</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="accelX">
+        <property name="text">
+         <string>Aceleración X</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="accelY">
+        <property name="text">
+         <string>Aceleración Y</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
@@ -92,7 +141,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>620</width>
      <height>22</height>
     </rect>
    </property>

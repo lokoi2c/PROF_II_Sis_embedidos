@@ -2,6 +2,12 @@
 #include "joystick.h"
 #include "SensorT.h"
 #include "serialqt.h"
+#include "MPU6050"
+
+
+const int mpuAddress = 0x68;  // Puede ser 0x68 o 0x69
+MPU6050 mpu(mpuAddress);
+
 
 int elpinled = 33;  //pin del led touch
 int lacap = 32; //pin del sensor touch
@@ -43,5 +49,20 @@ void loop() {
 
   delay(80);//si se desea quitar este retraso tambien se deben quitar los de Motores.cpp
   Serial.flush();
+
+
+// LECTURA DEL GIROSCOPIO: //
+  mpu.getAcceleration(&ax, &ay, &az);
+
+	//Calcular los angulos de inclinacion
+	float accel_ang_x = atan(ax / sqrt(pow(ay, 2) + pow(az, 2)))*(180.0 / 3.14);
+	float accel_ang_y = atan(ay / sqrt(pow(ax, 2) + pow(az, 2)))*(180.0 / 3.14);
+
+	// Mostrar resultados
+	Serial.print(F("Inclinacion en X: "));
+	Serial.print(accel_ang_x);
+	Serial.print(F("\tInclinacion en Y:"));
+	Serial.println(accel_ang_y);
+	delay(10);
 }
 
