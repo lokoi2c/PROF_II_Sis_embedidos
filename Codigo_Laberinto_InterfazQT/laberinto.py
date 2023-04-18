@@ -8,7 +8,7 @@ from PyQt5 import QtCore, QtGui
 import serial #dwddl
 import serial.tools.list_ports as list_ports
 
-
+#otra prueba
 #leer datos disponibles en el puerto, cuando los halla se genera una señal, llamda update
 class ReadPort(QtCore.QObject):
     update = QtCore.pyqtSignal(str)
