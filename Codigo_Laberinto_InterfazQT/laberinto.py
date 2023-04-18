@@ -120,4 +120,4 @@ if __name__ == "__main__":
     laberin.show()
     sys.exit(app.exec())
     
-    ##lo que falta es la creacion de los hilos
+    ##lo que falta es la creacion de los hilos sjlbjnaeroibnaroijn
