@@ -4,9 +4,12 @@ from PyQt5.QtWidgets import QMainWindow, QApplication
 from PyQt5 import uic
 from PyQt5.Qt import Qt#CA
 import serial #dwddl
+#este es un ejemplo
+
 
 
 #HOLA, este fue el ultimo cambio
+
 
 serial = serial.Serial('/dev/ttyUSB0', 115200)# (puerto, velocidad) objeto tipo serial
 
