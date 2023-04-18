@@ -2,8 +2,8 @@
 import sys # libreria que habilita funcionaliades del sistema
 from PyQt5.QtWidgets import QMainWindow, QApplication
 from PyQt5 import uic
-from PyQt5.Qt import Qt
-import serial
+from PyQt5.Qt import Qt#CA
+import serial #dwddl
 
 
 #HOLA, SOY EL CARLOS QUE NO ES GAY
