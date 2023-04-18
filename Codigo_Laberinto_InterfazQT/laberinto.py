@@ -67,7 +67,7 @@ class laberinto(QMainWindow):#herencia
         # Connect signals - slots
         #eventos asociados a una funcion, llevan nombre del boton  y la funcion a ejecutar
         #self.ui.max.clicked.connect(self.click_max)
-        self.ui.max.clicked.connect(self.click_max('d'))
+        self.ui.max.clicked.connect(self.click_max)
         self.ui.mex.clicked.connect(self.click_mex)#
         self.ui.may.clicked.connect(self.click_may)#otro cambio
         self.modo.stateChanged.connect(self.cambio_modo)#si es  activado cambia el modo de juego
@@ -86,13 +86,7 @@ class laberinto(QMainWindow):#herencia
         self.letraPrevia = 'e'
         
 #metodos llamados como eventos al presionar los botones  
-    def click_enviar(self, letraEnviar):
-        self.letraEnviada = letraEnviar
-        if self.letraEnviada == self.letraPrevia:
-            pass
-        else:
-            serial.write(b'd')
-        self.letraPrevia = self.letraEnviada
+
     def click_max(self):
         self.letraEnviada = 'd'
         if self.letraEnviada == self.letraPrevia:
