@@ -29,6 +29,12 @@
       </item>
       <item row="5" column="0">
        <widget class="QPushButton" name="mex">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
         <property name="cursor">
          <cursorShape>OpenHandCursor</cursorShape>
         </property>
@@ -59,6 +65,12 @@
       </item>
       <item row="4" column="1">
        <widget class="QPushButton" name="may">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
         <property name="text">
          <string>+Y</string>
         </property>
@@ -66,6 +78,12 @@
       </item>
       <item row="5" column="1">
        <widget class="QPushButton" name="centro">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
         <property name="text">
          <string>CENTRAR</string>
         </property>
@@ -73,6 +91,12 @@
       </item>
       <item row="6" column="1">
        <widget class="QPushButton" name="mey">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
         <property name="text">
          <string>-Y</string>
         </property>
@@ -97,6 +121,12 @@
       </item>
       <item row="5" column="2">
        <widget class="QPushButton" name="max">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
         <property name="text">
          <string>+X</string>
         </property>
@@ -105,7 +135,10 @@
       <item row="1" column="1" rowspan="3">
        <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>Image Camera</string>
+         <string>camara</string>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -115,7 +148,7 @@
       <item row="2" column="0">
        <widget class="QLabel" name="accelX">
         <property name="text">
-         <string>Aceleración X</string>
+         <string>AX:</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -125,7 +158,7 @@
       <item row="3" column="0">
        <widget class="QLabel" name="accelY">
         <property name="text">
-         <string>Aceleración Y</string>
+         <string>AY:</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
