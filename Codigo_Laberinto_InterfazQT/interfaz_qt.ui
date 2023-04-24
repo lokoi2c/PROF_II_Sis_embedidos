@@ -57,7 +57,8 @@
            <string>Refresh</string>
           </property>
           <property name="icon">
-           <iconset theme="search"/>
+           <iconset theme="search">
+            <normaloff>.</normaloff>.</iconset>
           </property>
          </widget>
         </item>
@@ -115,7 +116,8 @@
          <string>Conectar</string>
         </property>
         <property name="icon">
-         <iconset theme="document-open"/>
+         <iconset theme="document-open">
+          <normaloff>.</normaloff>.</iconset>
         </property>
        </widget>
       </item>
@@ -133,7 +135,7 @@
        </widget>
       </item>
       <item row="1" column="1" rowspan="3">
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="camLabel">
         <property name="text">
          <string>camara</string>
         </property>
@@ -162,6 +164,13 @@
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QCheckBox" name="enableCam">
+        <property name="text">
+         <string>CheckBox</string>
         </property>
        </widget>
       </item>

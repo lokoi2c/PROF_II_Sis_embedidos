@@ -1,15 +1,19 @@
 #importar dependencias necesarias para ejecutar qt
-import sys # libreria que habilita funcionaliades del sistema
+import sys, json # libreria que habilita funcionaliades del sistema
 from PyQt5.QtWidgets import QMainWindow, QApplication
 from PyQt5 import  uic
 from PyQt5 import QtCore, QtGui
-#from PyQt5.Qt import Qt#CA
+from PyQt5.QtCore import QTimer, Qt
+from PyQt5.QtGui import QImage, QPixmap
 #modulos asociados al serial
 import serial #dwddl
 import serial.tools.list_ports as list_ports
+from time import sleep
+
+import cv2
 
 #otra prueba
-#leer datos disponibles en el puerto, cuando los halla se genera una señal, llamda update
+#leer datos disponibles en el puerto, cuando los haya se genera una señal, llamda update
 class ReadPort(QtCore.QObject):
     update = QtCore.pyqtSignal(str)
     #constructor
@@ -22,17 +26,60 @@ class ReadPort(QtCore.QObject):
             if self.serial.is_open:
                 try:
                     if self.serial.in_waiting > 0:
-                        data = self.serial.read()
+                        data = self.serial.readline()
                         data = data.replace(b'\r', b'')
+                        data = data.replace(b'\n', b'')
                         text = data.decode('iso-8859-1')
-                        self.update.emit(text)
+                        self.update.emit(text.split(','))
                 except:
                     pass
                 
-#creacion de la clase principalll
+
+class camaraInterfaz(QtCore.QObject):#QtCore.QObject
+    def __init__(self, camLabel):#constructor
+        super().__init__()
+        #objeto de la camara
+        self.cam = cv2.VideoCapture(0)
+        self.cam.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+        self.cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+        self.camLabel = camLabel
+        self.pixmap = QPixmap()  
+        self.activarCamara = True       
+        #self.show()
+        
+#Metodo para actualizar la imagen de la camara
+    def updateCamera(self):
+        while True:
+            if self.activarCamara == True:
+                if self.cam.isOpened():
+                    ret, frame = self.cam.read()
+                    magenHSV = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+                    if not ret:#si no se tomo captura de imagen, retorne
+                        return
+                #convierte la imagen capturada con openCV a Qt
+                #imagen, anccho, alto, ancho*numerobits por pixel, formato de imagen
+                image = QImage(frame, frame.shape[1], frame.shape[0], frame.shape[1]*frame.shape[2], QImage.Format_RGB888)
+                
+                self.pixmap.convertFromImage(image.rgbSwapped())
+                self.camLabel.setPixmap(self.pixmap) # se muestra la imagen en la labelCam
+            sleep(0.03)
+        
+    def enableCamera(self, state):
+        if state == Qt.Checked:
+            self.activarCamara = True
+            
+        else:
+            self.pixmap.fill(Qt.transparent)
+            self.camLabel.setPixmap(self.pixmap)
+            self.activarCamara = False
+            
+            
+                
+#creacion de la CLASE PRINCIPAL ----------------------------------
 class laberinto(QMainWindow):#herencia
     def __init__(self):
-        super().__init__()#(laberinto, self).__init__()
+        super().__init__()#(laberinto, self).__init__() inputEdit
         self.ui = uic.loadUi('interfaz_qt.ui', self)#cargar la interfaz grafica
         
         self.serial = serial.Serial(timeout=0)# (puerto, velocidad) objeto tipo serial
@@ -55,13 +102,22 @@ class laberinto(QMainWindow):#herencia
             self.serial.port = self.ui.portOptions.currentText()
             self.ui.connectButton.setEnabled(True)
             
-        #se crea el hilo
+        #se crean los hilos
         self.thread = QtCore.QThread()
+        self.hiloCamara = QtCore.QThread()
 
+        #objetod de las clases que funcionan con hilos
         self.readPort = ReadPort(self.serial)
+        self.camara = camaraInterfaz(self.ui.camLabel)
         
-        self.readPort.moveToThread(self.thread)#se entrega el metodo readport a el hilo principal
+        #se entrega el metodo readport a el hilo principal
+        self.readPort.moveToThread(self.thread)
+        self.camara.moveToThread(self.hiloCamara)
+        
+        #se inicializan los hilos
         self.thread.started.connect(self.readPort.run)
+        self.hiloCamara.started.connect(self.camara.updateCamera)
+        
         self.readPort.update.connect(self.updateText)
         
         # Connect signals - slots
@@ -85,7 +141,16 @@ class laberinto(QMainWindow):#herencia
         self.letraEnviada = 'e'
         self.letraPrevia = 'e'
         
+        #Items relacionados con la camara ---------------------------
+    
+        self.ui.enableCam.stateChanged.connect(self.probar)#si es  activado el checkBox llama la funcion enableCamera
+        self.hiloCamara.start()
+        
+#el error encontrado es llamar una funcion externa a la presente clase-------------------------------------------------------------
+        
 #metodos llamados como eventos al presionar los botones  
+    def probar(self, state):
+        self.camara.enableCamera(state)
 
     def click_max(self):
         self.letraEnviada = 'd'
@@ -177,16 +242,16 @@ class laberinto(QMainWindow):#herencia
             self.serial.open()       
             # self.readTimer.start(10)
             self.thread.start()
-            self.ui.sendButton.setEnabled(True)
+            #self.ui.sendButton.setEnabled(True)
             self.ui.connectButton.setText('Disconnect')
-            self.ui.inputEdit.setEnabled(True)
+            #self.ui.inputEdit.setEnabled(True)
         else:
             self.thread.quit()
             self.serial.close()
             # self.readTimer.stop()
-            self.ui.sendButton.setEnabled(False)
+            #self.ui.sendButton.setEnabled(False)
             self.ui.connectButton.setText('Connect')
-            self.ui.inputEdit.setEnabled(False)
+            #self.ui.inputEdit.setEnabled(False)
         
     def refresh(self):  
         # Get available ports
