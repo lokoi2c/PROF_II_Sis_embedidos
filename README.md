@@ -1,2 +1,2 @@
 # PROFUNDIZACIÓN I Sistemas Embedidos
-##Proyecto Laberinto Inteligente
+## Proyecto Laberinto Inteligente
