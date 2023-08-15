@@ -15,4 +15,8 @@ fg
 ![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/5f59cf84-d472-44ad-b9b8-447e10a46abf)
 sgsrg
 ##Laberinto final
-sdfse
+![laberinto2](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/df13e8dd-af8d-4b98-87bd-7418dc23e212)
+![laberinto](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/32fb4e13-0f13-4f7b-8952-f1f387bd18af)
+
+##Conclusiones:
+sdfs
