@@ -10,8 +10,8 @@ Raspberry Pi. El laberinto tendrá la función de notificar cuando sea resuelto.
 
 ## Circuito esquematico
 ![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/b84b9625-7a5d-4463-94c3-fba522d0611c)
-
+fg
 ## Diseño del sistema
 ![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/5f59cf84-d472-44ad-b9b8-447e10a46abf)
-
+sgsrg
 ##Laberinto final
