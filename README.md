@@ -7,3 +7,5 @@ sistema que pase por todas estas etapas, realizando un modelo de laberinto
 que tendrá que resolverse de manera automática, valiéndose del 
 funcionamiento de sistemas embebidos como el SoC ESP32 y finalmente 
 Raspberry Pi. El laberinto tendrá la función de notificar cuando sea resuelto.
+
+![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/b84b9625-7a5d-4463-94c3-fba522d0611c)
