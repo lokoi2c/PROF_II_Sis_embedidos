@@ -15,3 +15,4 @@ fg
 ![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/5f59cf84-d472-44ad-b9b8-447e10a46abf)
 sgsrg
 ##Laberinto final
+sdfse
