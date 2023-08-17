@@ -30,6 +30,7 @@ los servomotores (cables amarillos en la
 ilustración 4), no olvide dirigir los cables VCC
 (rojo) y GND (negro) a una fuente de 
 alimentación externa al sistema.
+#
 ![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/889db8cf-b9b7-4672-8659-4348fc85a712)
 ### Joystick:
 El joystick suministrado con el 
@@ -44,6 +45,7 @@ conexiones del eje X y eje Y van dirigidas a los pines que
 muestra la ilustración 3, mientras que VCC y GND beben 
 de los pines de alimentación de la ESP32, NO de la fuente externa que alimenta a los 
 motores. 
+#
 ![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/1c1f038a-91c9-49d0-a9cd-60da1bf80e4e)
 ### MPU6050
 : El MPU6050 es un 
@@ -52,7 +54,8 @@ Consta de 8 pines pero para el laberinto sólo se utilizan 4. El
 par de pines de alimentación, y los pines SCL y SDA que 
 forman parte del protocolo ya mencionado. Estos últimos se 
 conectan como se indica en la ilustración 3, mientras que los 
-pines de alimentación van a los que suministra la ESP32
+pines de alimentación van a los que suministra la ESP32.
+
 ![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/6f8bfce0-033a-4801-abd3-98e0153114d6)
 
 fg
