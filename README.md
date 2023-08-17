@@ -18,10 +18,9 @@ computadora. Sin embargo, si desea transportar el laberinto, reemplazar piezas o
 algún motivo accidental desconectó partes del circuito de la ESP32, deberá tener en 
 cuenta las siguientes conexiones
 ![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/b84b9625-7a5d-4463-94c3-fba522d0611c)
-### Esp32
-![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/6a148df5-3ead-41ea-8849-4c396e46c0a6)
-### Servos
-: Dado el calibre de los 
+
+### Servos: 
+Dado el calibre de los 
 servomotores, estos necesitan una fuente de 
 alimentación externa, concretamente de 12V.
 Los pines señalados en la ilustración 3 
@@ -47,8 +46,8 @@ de los pines de alimentación de la ESP32, NO de la fuente externa que alimenta 
 motores. 
 #
 ![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/1c1f038a-91c9-49d0-a9cd-60da1bf80e4e)
-### MPU6050
-: El MPU6050 es un 
+### MPU6050:
+es un 
 dispositivo que se comunica a través del protocolo i2C. 
 Consta de 8 pines pero para el laberinto sólo se utilizan 4. El 
 par de pines de alimentación, y los pines SCL y SDA que 
@@ -58,12 +57,14 @@ pines de alimentación van a los que suministra la ESP32.
 
 ![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/6f8bfce0-033a-4801-abd3-98e0153114d6)
 
-fg
-## Diseño del sistema
+## Diseño del sistema:
+Mediante el uso de la herramienta freeCAD  se elaboró un diseño 3D del prototipo de laberinto a implementar, tal como se aprecia en la siguiente imagen:
 ![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/5f59cf84-d472-44ad-b9b8-447e10a46abf)
-sgsrg
+
 ##Laberinto final
+Tras la elaboración fisica del sistema y la conexion de los distintos componentes, una primera versión del laberinto son las siguientes imagenes:
 ![laberinto2](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/df13e8dd-af8d-4b98-87bd-7418dc23e212)
+---------
 ![laberinto](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/32fb4e13-0f13-4f7b-8952-f1f387bd18af)
 
 ##Conclusiones:
