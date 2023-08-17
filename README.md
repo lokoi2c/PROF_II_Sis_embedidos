@@ -61,10 +61,10 @@ pines de alimentación van a los que suministra la ESP32.
 Mediante el uso de la herramienta freeCAD  se elaboró un diseño 3D del prototipo de laberinto a implementar, tal como se aprecia en la siguiente imagen:
 ![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/5f59cf84-d472-44ad-b9b8-447e10a46abf)
 
-##Laberinto final
+## Laberinto final
 Tras la elaboración fisica del sistema y la conexion de los distintos componentes, una primera versión del laberinto son las siguientes imagenes:
 ![laberinto2](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/df13e8dd-af8d-4b98-87bd-7418dc23e212)
----------
+
 ![laberinto](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/32fb4e13-0f13-4f7b-8952-f1f387bd18af)
 
 ##Conclusiones:
