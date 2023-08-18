@@ -16,8 +16,9 @@ automatizarlo.
 La integración de la Raspberry al sistema es simplemente la conexión de esta, a la 
 computadora. Sin embargo, si desea transportar el laberinto, reemplazar piezas o por 
 algún motivo accidental desconectó partes del circuito de la ESP32, deberá tener en 
-cuenta las siguientes conexiones
-![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/b84b9625-7a5d-4463-94c3-fba522d0611c)
+cuenta las siguientes conexiones:
+![image](https://github.com/lokoi2c/embebidos/assets/71717504/322854c0-318e-4089-8691-38198dfff779)
+
 
 ### Servos: 
 Dado el calibre de los 
@@ -30,7 +31,8 @@ ilustración 4), no olvide dirigir los cables VCC
 (rojo) y GND (negro) a una fuente de 
 alimentación externa al sistema.
 #
-![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/889db8cf-b9b7-4672-8659-4348fc85a712)
+![image](https://github.com/lokoi2c/embebidos/assets/71717504/ab364ea3-16b2-4f4d-87f6-5e9b136e49f9)
+
 ### Joystick:
 El joystick suministrado con el 
 laberinto posee 5 salidas para conectar; las mismas que 
@@ -45,7 +47,8 @@ muestra la ilustración 3, mientras que VCC y GND beben
 de los pines de alimentación de la ESP32, NO de la fuente externa que alimenta a los 
 motores. 
 #
-![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/1c1f038a-91c9-49d0-a9cd-60da1bf80e4e)
+![image](https://github.com/lokoi2c/embebidos/assets/71717504/ea953b72-0bca-4c56-8163-147964ab4a24)
+
 ### MPU6050:
 es un 
 dispositivo que se comunica a través del protocolo i2C. 
@@ -55,11 +58,13 @@ forman parte del protocolo ya mencionado. Estos últimos se
 conectan como se indica en la ilustración 3, mientras que los 
 pines de alimentación van a los que suministra la ESP32.
 
-![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/6f8bfce0-033a-4801-abd3-98e0153114d6)
+![image](https://github.com/lokoi2c/embebidos/assets/71717504/d6b18acc-0a4f-4cf4-a775-4dd72ea7c7eb)
+
 
 ## Diseño del sistema:
 Mediante el uso de la herramienta freeCAD  se elaboró un diseño 3D del prototipo de laberinto a implementar, tal como se aprecia en la siguiente imagen:
-![image](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/5f59cf84-d472-44ad-b9b8-447e10a46abf)
+![image](https://github.com/lokoi2c/embebidos/assets/71717504/8ae76b23-ccc1-425b-a41e-1046a601a6b3)
+
 
 ## Laberinto final
 Tras la elaboración fisica del sistema y la conexion de los distintos componentes, una primera versión del laberinto son las siguientes imagenes:
@@ -67,5 +72,6 @@ Tras la elaboración fisica del sistema y la conexion de los distintos component
 
 Imagen 2
 
-![laberinto](https://github.com/lokoi2c/PROF_II_Sis_embedidos/assets/71717504/32fb4e13-0f13-4f7b-8952-f1f387bd18af)
+![laberinto2](https://github.com/lokoi2c/embebidos/assets/71717504/1c199f2e-61a1-4134-b2fc-ef6a8ea0059b)
+
 
